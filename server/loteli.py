@@ -12,7 +12,7 @@ loteliRootPath = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 loteliRootClientPath = os.path.join(loteliRootPath, 'client')
 loteliRootServerPath = os.path.join(loteliRootPath, 'server')
 
-# Configuration de l'application
+# Configuration de l'application TODO : configurer directment les variables et configurer le serveur (IP, port)
 config = {
 	'/':{
 		'tools.staticdir.root': loteliRootClientPath,
@@ -32,14 +32,14 @@ log.screen = False
 
 # RotatingFileHandler pour les access : 10*10Mo maximum
 accessLogFileName = os.path.join(loteliRootServerPath, 'logs/access.log')
-accessLogHandler = logging.handlers.RotatingFileHandler(accessLogFileName, 'a', 10000000, 10)
+accessLogHandler = logging.handlers.RotatingFileHandler(accessLogFileName, 'a', 1000, 10)
 accessLogHandler.setLevel(logging.DEBUG)
 accessLogHandler.setFormatter(cherrypy._cplogging.logfmt)
 log.access_log.addHandler(accessLogHandler)
 
 # RotatingFileHandler pour les erreurs : 10*10Mo maximum
 errorLogFileName = os.path.join(loteliRootServerPath, 'logs/error.log')
-errorLogHandler = logging.handlers.RotatingFileHandler(errorLogFileName, 'a', 10000000, 10)
+errorLogHandler = logging.handlers.RotatingFileHandler(errorLogFileName, 'a', 1000, 10)
 errorLogHandler.setLevel(logging.DEBUG)
 errorLogHandler.setFormatter(cherrypy._cplogging.logfmt)
 log.error_log.addHandler(errorLogHandler)
