@@ -17,7 +17,8 @@ config = {
 	'/':{
 		'tools.staticdir.root': loteliRootClientPath,
 		'tools.staticdir.on': True,
-		'tools.staticdir.dir': ''
+		'tools.staticdir.dir': '',
+		'tools.staticdir.index': 'index.html'
 	}
 }
 

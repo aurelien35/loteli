@@ -1,0 +1,64 @@
+body
+{
+	margin: 0px;
+	font-size:14px;
+	background-image: url('../assets/bg_diagonals.png');
+	background-color: rgb(102, 102, 102);
+	background-attachment:fixed;
+	background-position: left top;
+	background-repeat: repeat;
+	overflow: auto;
+}
+
+#header
+{
+	margin: 0px;
+	background: #322f32;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+}
+
+#header:after
+{
+	display:block;
+	clear:both;
+	visibility:hidden;
+}
+
+#content
+{
+	margin: 40px 10px 0px 10px;
+}
+
+.noResize
+{
+	resize: none;
+}
+
+.alignRight
+{
+	text-align:right;
+}
+
+.topPadding_5px
+{
+	padding-top:5px;
+}
+
+.rightPadding_5px
+{
+	padding-right:5px;
+}
+
+.alignTop
+{
+	vertical-align:top;
+}
+
+.textBold
+{
+	font-weight:bold;
+}
